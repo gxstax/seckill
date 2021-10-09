@@ -9,7 +9,16 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>service-nginx</module>
+        <module>server-web</module>
+        <module>server-web/common</module>
+        <module>server-web/gateway</module>
+        <module>server-web/service</module>
+        <module>server-support</module>
+        <module>server-support/support-common</module>
+        <module>server-support/support-dao</module>
+        <module>server-support/support-launcher</module>
+        <module>server-support/support-service</module>
+        <module>server-support/support-export</module>
     </modules>
 
     <properties>
@@ -17,15 +26,45 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <logstash.version>6.1</logstash.version>
-        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
         <yaml.version>1.0.8</yaml.version>
         <google.guava.version>23.0</google.guava.version>
+
+        <!-- Spring Boot 版本号 -->
+        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <!--  Apache Dubbo 版本号-->
+        <dubbo.version>2.7.3</dubbo.version>
+        <!--  Nacos 版本号-->
+        <nacos.version>1.1.1</nacos.version>
     </properties>
 
     <!-- 依赖管理 -->
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+
+            <!-- Apache Dubbo 依赖 -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <!-- Spring Boot 依赖 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Nacos 依赖 -->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+
+            <!-- Google guava 依赖 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
