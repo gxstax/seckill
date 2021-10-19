@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>商品列表</title>
+</head>
+<body ms-controller="viewmodel">
+<h1 th:text="${msg}">Hello World</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <td class="active">id</td>
+        <td class="success">姓名</td>
+        <td class="warning">性别</td>
+        <td class="danger">年龄</td>
+        <td class="info">角色</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ms-for="el in @datalist">
+        <td >{{ message }}</td>
+        <td ></td>
+        <td></td>
+        <td ></td>
+        <td ></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</html>

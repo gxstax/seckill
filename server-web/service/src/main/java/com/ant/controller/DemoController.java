@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
  * DEMO
  * </p>
  *
- * @author GaoXin
+ * @author Ant
  * @since 2021/9/29 8:56 下午
  */
 @RestController
 public class DemoController {
 
-    @RequestMapping(value = "/demo", method = RequestMethod.GET)
+    @RequestMapping(value = "/sayhello", method = RequestMethod.GET)
     public String demo() {
-        return "SUCCESS";
+        return "Hello";
     }
 }
