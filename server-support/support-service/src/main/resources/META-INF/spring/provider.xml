@@ -17,8 +17,8 @@
 <!--    <dubbo:protocol name="dubbo" port="20880" />-->
 
 <!--    &lt;!&ndash; 声明需要暴露的服务接口 &ndash;&gt;-->
-<!--    <dubbo:service interface="com.ant.service.IHelloService" ref="IHelloService" />-->
+<!--    <dubbo:service interface="com.ant.service.provider.IHelloService" ref="IHelloService" />-->
 
 <!--    &lt;!&ndash; 和本地bean一样实现服务 &ndash;&gt;-->
-<!--    <bean id="IHelloService" class="com.ant.service.IHelloServiceImpl" />-->
+<!--    <bean id="IHelloService" class="com.ant.service.provider.impl.IHelloServiceImpl" />-->
 <!--</beans>-->

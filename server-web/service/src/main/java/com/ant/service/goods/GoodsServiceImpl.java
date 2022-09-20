@@ -1,7 +1,6 @@
 package com.ant.service.goods;
 
-import com.ant.domain.Goods;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import com.ant.domain.Products;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 
 /**
  * <p>
@@ -34,20 +32,21 @@ public class GoodsServiceImpl implements GoodsService {
      * </p>
      *
      * @param no
-     * @return {@link Goods}
+     * @return {@link Products}
      */
     @Override
-    public List<Goods> activityQuery(String no) {
-        String sql = "select * from goods";
-        return (List<Goods>) jdbcTemplate.query(sql, new RowMapper<Goods>(){
+    public List<Products> activityQuery(String no) {
+        String sql = "select * from products";
+        return (List<Products>) jdbcTemplate.query(sql, new RowMapper<Products>(){
 
             @Override
-            public Goods mapRow(ResultSet rs, int rowNum) throws SQLException {
-                Goods goods = new Goods();
-                goods.setId(rs.getLong("ID"));
-                goods.setNo(rs.getString("NO"));
-                goods.setName(rs.getString("NAME"));
-                return goods;
+            public Products mapRow(ResultSet rs, int rowNum) throws SQLException {
+                Products products = new Products();
+                products.setId(rs.getLong("ID"));
+                products.setNo(rs.getString("NO"));
+                products.setName(rs.getString("NAME"));
+                products.setNormalPrice(rs.getString("NORMAL_PRICE"));
+                return products;
             }
 
         });

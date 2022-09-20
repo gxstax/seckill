@@ -1,6 +1,7 @@
-package com.ant.service;
+package com.ant.service.provider.impl;
 
 
+import com.ant.service.provider.IHelloService;
 import org.apache.dubbo.config.annotation.Service;
 
 /**

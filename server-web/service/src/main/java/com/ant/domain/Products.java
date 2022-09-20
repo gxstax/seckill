@@ -2,6 +2,8 @@ package com.ant.domain;
 
 import org.springframework.data.annotation.Id;
 
+import java.math.BigDecimal;
+
 /**
  * <p>
  * 商品表实体
@@ -10,7 +12,7 @@ import org.springframework.data.annotation.Id;
  * @author Ant
  * @since 2021/10/9 8:31 下午
  */
-public class Goods {
+public class Products {
 
     private @Id Long id;
 

@@ -1,4 +1,4 @@
-package com.ant.service;
+package com.ant.service.provider;
 
 import org.apache.dubbo.config.annotation.Service;
 

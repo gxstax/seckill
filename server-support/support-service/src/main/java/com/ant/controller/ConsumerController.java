@@ -1,6 +1,6 @@
 package com.ant.controller;
 
-import com.ant.service.IHelloService;
+import com.ant.service.provider.IHelloService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

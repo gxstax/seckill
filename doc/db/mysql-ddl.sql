@@ -1,5 +1,5 @@
 -- 商品表
-CREATE TABLE `goods` (
+CREATE TABLE `products` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增主键',
   `no` varchar(45) NOT NULL COMMENT '商品编号',
   `name` varchar(45) NOT NULL COMMENT '商品名称',
