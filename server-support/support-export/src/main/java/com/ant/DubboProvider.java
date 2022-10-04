@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Dubbo服务提供者
  * </p>
  *
- * @author GaoXin
+ * @author Ant
  * @since 2021/9/30 6:10 下午
  */
 @SpringBootApplication

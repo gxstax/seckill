@@ -9,10 +9,10 @@ import org.apache.dubbo.config.annotation.Service;
  * 商品服务实现
  * </p>
  *
- * @author GaoXin
+ * @author Ant
  * @since 2021/10/19 6:03 下午
  */
-@Service(group = "product-cloud", protocol = "dubbo")
+@Service
 public class ProductBaseServiceImpl implements IProductBaseService {
 
     /**

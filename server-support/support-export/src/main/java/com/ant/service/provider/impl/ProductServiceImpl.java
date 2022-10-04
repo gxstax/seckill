@@ -10,7 +10,7 @@ import org.apache.dubbo.config.annotation.Service;
  * 产品服务实现
  * </p>
  *
- * @author GaoXin
+ * @author Ant
  * @since 2021/10/19 5:57 下午
  */
 @Service
