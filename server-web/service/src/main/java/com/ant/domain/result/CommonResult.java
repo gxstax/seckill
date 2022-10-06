@@ -90,7 +90,7 @@ public class CommonResult<T> {
     /**
      * 失败封装(带参数)
      *
-     * @author GaoXin
+     * @author Ant
      * @since 2019/7/17 18:40
      */
     public static <T> CommonResult<T> error(Integer code, String message) {

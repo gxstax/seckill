@@ -1,0 +1,21 @@
+server:
+  port: 14512
+spring:
+  application:
+    name: provider-seckill-service
+  main:
+    allow-bean-definition-overriding: true
+dubbo:
+  application:
+    name: server-web-provider-seckill
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
+  scan:
+    base-packages: com.ant
+  protocol:
+    name: dubbo
+    port: 15512
+  provider:
+    group: product-seckill

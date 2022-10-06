@@ -1,8 +1,5 @@
 package com.ant.domain;
 
-import org.springframework.data.annotation.Id;
-
-import java.math.BigDecimal;
 
 /**
  * <p>
@@ -14,7 +11,7 @@ import java.math.BigDecimal;
  */
 public class Products {
 
-    private @Id Long id;
+    private Long id;
 
     /**
      * 商品编号

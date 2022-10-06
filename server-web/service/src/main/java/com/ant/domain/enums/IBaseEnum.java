@@ -5,7 +5,7 @@ package com.ant.domain.enums;
  * 基础返回结果接口
  * </p>
  *
- * @author GaoXin
+ * @author Ant
  * @since 2021/10/19 2:13 下午
  */
 public interface IBaseEnum {

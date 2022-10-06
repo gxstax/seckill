@@ -1,0 +1,21 @@
+server:
+  port: 14511
+spring:
+  application:
+    name: provider-service
+  main:
+    allow-bean-definition-overriding: true
+dubbo:
+  application:
+    name: server-web-provider
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
+  scan:
+    base-packages: com.ant
+  protocol:
+    name: dubbo
+    port: 15511
+  provider:
+    group: product-group

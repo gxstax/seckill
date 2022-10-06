@@ -1,6 +1,7 @@
 package com.ant.service.goods;
 
 import com.ant.domain.Products;
+import com.ant.domain.SkuInfo;
 
 import java.util.List;
 
@@ -20,8 +21,8 @@ public interface GoodsService {
      * </p>
      *
      * @param no
-     * @return {@link Products}
+     * @return {@link SkuInfo}
      */
-    List<Products> activityQuery(String no);
+    SkuInfo activityQuery(String no);
 
 }

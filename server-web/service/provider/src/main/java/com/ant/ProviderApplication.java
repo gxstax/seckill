@@ -1,23 +1,22 @@
 package com.ant;
 
+
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * <p>
- * 启动类
+ *  Provider 应用
  * </p>
  *
  * @author Ant
- * @since 2021/9/29 9:02 下午
+ * @date 2022/10/05 01:29
  */
 @EnableDubbo
 @SpringBootApplication
-public class ServiceApplication {
-
+public class ProviderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ServiceApplication.class, args);
+        SpringApplication.run(ProviderApplication.class, args);
     }
-
 }

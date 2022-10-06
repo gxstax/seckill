@@ -5,7 +5,7 @@ package com.ant.domain.enums;
  * 功能描述
  * </p>
  *
- * @author GaoXin
+ * @author Ant
  * @since 2021/10/19 2:14 下午
  */
 public enum BaseResultEnum implements IBaseEnum {
