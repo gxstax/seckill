@@ -14,6 +14,11 @@
     <artifactId>server-web</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>common</module>
+        <module>gateway</module>
+        <module>service</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +27,7 @@
         <logstash.version>6.1</logstash.version>
         <spring.version>4.3.16.RELEASE</spring.version>
         <dubbo.version>3.0.7</dubbo.version>
-        <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
         <yaml.version>1.0.8</yaml.version>
         <google.guava.version>23.0</google.guava.version>
     </properties>

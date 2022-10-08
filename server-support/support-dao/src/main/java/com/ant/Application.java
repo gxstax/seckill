@@ -1,12 +1,14 @@
 package com.ant;
 
 import com.ant.domain.product.repository.mapper.ProductsMapper;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+@EnableDubbo
 @SpringBootApplication
 @MapperScan("com.ant.domain.product.repository")
 public class Application {
