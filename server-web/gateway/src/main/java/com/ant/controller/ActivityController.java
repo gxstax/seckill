@@ -1,80 +1,48 @@
 package com.ant.controller;
 
-import com.ant.cache.ILocalCache;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
-import java.util.Date;
+import java.util.Map;
 
+/**
+ * <p>
+ *  活动控制器
+ * </p>
+ *
+ * @author Ant
+ * @date 2022/10/09 10:09
+ */
 @Controller
-@RequestMapping( "/activity" )
+@RequestMapping("/activity")
 public class ActivityController {
+    Logger logger = LoggerFactory.getLogger(ActivityController.class);
 
-    @Autowired
-    ActivityExportService activityExportService;
+    @Value("${application.message:Hello World}")
+    private String message = "Hello World";
 
-    @Resource(name = "activityLocalCache")
-    ILocalCache iLocalCache;
-
-    Logger logger = LogManager.getLogger(ActivityController.class);
-
-    /**
-     * 查询活动库存
-     * @return
-     */
-    @CrossOrigin
-    @RequestMapping(value = {"/queryStore"}, method = {RequestMethod.POST,RequestMethod.GET})
-    @ResponseBody
-    public Integer queryStore(String productId) {
-        try{
-            Result<Integer> result = activityExportService.queryStore(productId);
-            return result.getData();
-        }catch (Exception e){
-            logger.error("query activity store exception:",e);
-            return null;
-        }
+    @RequestMapping(value = "/query")
+    public String product(Model model) {
+        return "login";
     }
 
+    @GetMapping("product")
+    public String product(Map<String, Object> model) {
+        logger.info("product request...");
+        return "product";
+    }
 
-    /**
-     * 查询活动信息
-     * @return
-     */
-    @CrossOrigin
-    @RequestMapping(value = {"/subQuery"}, method = {RequestMethod.POST,RequestMethod.GET})
-    @ResponseBody
-    public ActivityDetailDTO subQuery(String productId) {
-
-        ActivityDetailDTO detailDTO = new ActivityDetailDTO();
-
-        SeckillActivityDTO activityDTO = (SeckillActivityDTO)iLocalCache.get(productId);
-        if(activityDTO == null){
-            return null;
-        }
-
-        detailDTO.setProductPrice(activityDTO.getActivityPrice().toPlainString());
-        detailDTO.setProductPictureUrl(activityDTO.getActivityPictureUrl());
-        detailDTO.setProductName(activityDTO.getActivityName());
-
-        Integer isAvailable = 1;
-        if(activityDTO.getStockNum()<=0){
-            isAvailable = 0;
-        }
-        Date now = new Date();
-        if(now.before(activityDTO.getActivityStart()) || now.after(activityDTO.getActivityEnd())){
-            isAvailable = 0;
-        }
-        detailDTO.setIsAvailable(isAvailable);
-
-        return detailDTO;
-
+    @GetMapping("welcome")
+    public String welcome(Map<String, Object> model) {
+        logger.info("welcome request...");
+        return "/welcome";
     }
 
 }
