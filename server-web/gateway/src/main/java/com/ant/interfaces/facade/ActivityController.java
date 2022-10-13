@@ -1,4 +1,4 @@
-package com.ant.controller;
+package com.ant.interfaces.facade;
 
 
 import org.slf4j.Logger;
@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.util.Map;
 
 /**
@@ -34,15 +33,15 @@ public class ActivityController {
     }
 
     @GetMapping("product")
-    public String product(Map<String, Object> model) {
+    public ModelAndView product() {
         logger.info("product request...");
-        return "product";
+        return new ModelAndView("product/view", "message", message);
     }
 
     @GetMapping("welcome")
     public String welcome(Map<String, Object> model) {
         logger.info("welcome request...");
-        return "/welcome";
+        return "welcome";
     }
 
 }

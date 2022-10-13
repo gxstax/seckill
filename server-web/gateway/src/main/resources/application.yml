@@ -1,20 +1,35 @@
 server:
-  port: 7081
-
+  port: 10510
+  tomcat:
+    basedir: target/tomcat
+    accesslog:
+      enabled: true
 spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/pages/
-      suffix: .html
-  freemarker:
+  thymeleaf:
     cache: false
-    charset: UTF-8
-    check-template-location: true
-    content-type: text/html
-    enabled: true
-    suffix: .html
-    template-loader-path: /WEB-INF/pages/
+  application:
+    name: server-web-gateway
+    main:
+      allow-bean-definition-overriding: true
 
 application:
   message: Hello Ant
+
+dubbo:
+  application:
+    name: server-web-gateway
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
+  scan:
+    base-packages: com.ant
+  protocol:
+    name: dubbo
+    port: 10510
+  consumer:
+    group: product-group
+
+
+
 

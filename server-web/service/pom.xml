@@ -12,13 +12,10 @@
     <modules>
         <module>provider</module>
         <module>interface</module>
-        <module>consumer</module>
         <module>provider-seckill</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <netty.version>4.1.56.Final</netty.version>

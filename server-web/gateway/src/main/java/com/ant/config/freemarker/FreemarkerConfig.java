@@ -19,10 +19,10 @@ import java.util.Properties;
  * @author Ant
  * @date 2022/10/09 20:34
  */
-@Configuration
+//@Configuration
 public class FreemarkerConfig {
 
-    @Bean
+//    @Bean
     public FreeMarkerConfigurer freeMarkerConfigurer() {
 
         FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
@@ -37,7 +37,7 @@ public class FreemarkerConfig {
         return configurer;
     }
 
-    @Bean
+//    @Bean
     public FreeMarkerViewResolver freeMarkerViewResolver() {
         FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();
         resolver.setExposeRequestAttributes(true);
