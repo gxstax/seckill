@@ -1,7 +1,7 @@
 package com.ant.domain.product.assembler;
 
 import com.ant.domain.product.repository.po.ProductsPO;
-import com.ant.facade.domain.product.entity.Product;
+import com.ant.interfaces.domain.product.entity.Product;
 import org.springframework.beans.BeanUtils;
 
 /**

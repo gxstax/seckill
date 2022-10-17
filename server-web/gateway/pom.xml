@@ -83,7 +83,7 @@
         <!-- dubbo 服务依赖 -->
         <dependency>
             <groupId>com.ant</groupId>
-            <artifactId>interface-server</artifactId>
+            <artifactId>application-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

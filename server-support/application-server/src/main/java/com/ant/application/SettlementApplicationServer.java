@@ -1,6 +1,6 @@
 package com.ant.application;
 
-import com.ant.facade.application.SettlementService;
+import com.ant.interfaces.application.SettlementApplicationInterface;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**
@@ -12,6 +12,6 @@ import org.apache.dubbo.config.annotation.DubboService;
  * @Date 2022/10/14 17:29
  */
 @DubboService
-public class SettlementApplicationService implements SettlementService {
+public class SettlementApplicationServer implements SettlementApplicationInterface {
 
 }

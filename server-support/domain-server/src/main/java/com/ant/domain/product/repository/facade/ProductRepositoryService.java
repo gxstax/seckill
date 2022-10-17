@@ -10,7 +10,7 @@ import com.ant.domain.product.repository.po.ProductsPO;
  * @Author Ant
  * @Date 2022/10/15 11:58
  */
-public interface ProductRepositoryInterface {
+public interface ProductRepositoryService {
 
     /**
      * <p>

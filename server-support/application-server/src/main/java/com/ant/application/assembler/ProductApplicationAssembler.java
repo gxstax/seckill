@@ -1,7 +1,7 @@
 package com.ant.application.assembler;
 
-import com.ant.facade.application.dto.ProductDTO;
-import com.ant.facade.domain.product.entity.Product;
+import com.ant.interfaces.application.dto.ProductDTO;
+import com.ant.interfaces.domain.product.entity.Product;
 import org.springframework.beans.BeanUtils;
 
 /**

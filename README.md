@@ -8,8 +8,20 @@
   4. 限流：根据 IP 或者自定义关键入参做限流。
   5. 异常提示页面：主要是进结算页失败的提示页，可能是被限流，被业务校验拦截或者是后端服务异常等。
     
-* service-member
+* service-web
   1. 提供结算页 H5。
     
 * service-support
   1. 提供基础服务、数据的支持，包括活动数据、商品数据、用户维度数据、提单等，主要模拟基础服务，正常情况下，应该是按业务模块做细致划分。
+* server-interface
+  1. dubbo RPC 接口定义
+### 项目启动流程
+*nginx(server-nginx目录下)
+  
+  > 启动: <br>
+  > nginx -p \`pwd\` / -c config/nginx.conf
+
+  > 停止: <br>
+  > nginx -p \`pwd\` -s stop
+  
+* server-web

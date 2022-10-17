@@ -1,6 +1,6 @@
-package com.ant.facade.domain.product.service;
+package com.ant.interfaces.domain.product.service;
 
-import com.ant.facade.domain.product.entity.Product;
+import com.ant.interfaces.domain.product.entity.Product;
 
 /**
  * <p>
@@ -10,7 +10,7 @@ import com.ant.facade.domain.product.entity.Product;
  * @Author Ant
  * @Date 2022/10/15 14:15
  */
-public interface ProductDomainServiceInterface {
+public interface ProductDomainInterface {
     
     /**
      * <p>

@@ -1,4 +1,4 @@
-package com.ant.facade.domain.product.entity;
+package com.ant.interfaces.domain.product.entity;
 
 import lombok.Data;
 

@@ -1,7 +1,6 @@
-package com.ant.facade.application.dto;
+package com.ant.interfaces.application.dto;
 
 import lombok.Data;
-
 import java.io.Serializable;
 
 /**

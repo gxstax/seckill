@@ -1,6 +1,6 @@
 package com.ant.application;
 
-import com.ant.facade.application.ActivityService;
+import com.ant.interfaces.application.ActivityApplicationInterface;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**
@@ -12,6 +12,6 @@ import org.apache.dubbo.config.annotation.DubboService;
  * @Date 2022/10/14 17:28
  */
 @DubboService
-public class ActivityApplicationService implements ActivityService {
+public class ActivityApplicationServer implements ActivityApplicationInterface {
 
 }

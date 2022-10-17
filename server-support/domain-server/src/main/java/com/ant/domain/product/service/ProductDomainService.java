@@ -1,9 +1,9 @@
 package com.ant.domain.product.service;
 
-import com.ant.domain.product.repository.facade.ProductRepositoryInterface;
+import com.ant.domain.product.repository.facade.ProductRepositoryService;
 import com.ant.domain.product.repository.po.ProductsPO;
-import com.ant.facade.domain.product.entity.Product;
-import com.ant.facade.domain.product.service.ProductDomainServiceInterface;
+import com.ant.interfaces.domain.product.entity.Product;
+import com.ant.interfaces.domain.product.service.ProductDomainInterface;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboService;
 import com.ant.domain.product.assembler.ProductDomainAssembler;
@@ -20,14 +20,14 @@ import org.slf4j.LoggerFactory;
  */
 @Slf4j
 @DubboService
-public class ProductDomainService implements ProductDomainServiceInterface {
+public class ProductDomainService implements ProductDomainInterface {
 
     Logger logger = LoggerFactory.getLogger(ProductDomainService.class);
 
-    private final ProductRepositoryInterface productRepositoryInterface;
+    private final ProductRepositoryService productRepositoryService;
 
-    public ProductDomainService(ProductRepositoryInterface productRepositoryInterface) {
-        this.productRepositoryInterface = productRepositoryInterface;
+    public ProductDomainService(ProductRepositoryService productRepositoryInterface) {
+        this.productRepositoryService = productRepositoryInterface;
     }
 
     /**
@@ -41,7 +41,7 @@ public class ProductDomainService implements ProductDomainServiceInterface {
     @Override
     public Product findProductById(Long productId) {
         logger.info("[Domain-Server]-findProductById请求，入参productId[{}]", productId);
-        ProductsPO productsPO = productRepositoryInterface.findProductById(productId);
+        ProductsPO productsPO = productRepositoryService.findProductById(productId);
         logger.info("[Domain-Server]-findProductById请求，结果productsPO[{}]", productsPO);
         return ProductDomainAssembler.productsPoToEntity(productsPO);
     }

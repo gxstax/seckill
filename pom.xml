@@ -10,14 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>server-web</module>
-        <module>server-web/common</module>
-        <module>server-web/gateway</module>
-        <module>server-web/service</module>
         <module>server-support</module>
-        <module>server-support/application-server</module>
-        <module>server-support/interface-server</module>
-        <module>server-support/infrastructure-server</module>
-        <module>server-support/domain-server</module>
+        <module>server-interface</module>
     </modules>
 
     <build>
@@ -25,6 +19,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>

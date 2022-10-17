@@ -1,12 +1,10 @@
 package com.ant.domain.product.repository.persistence;
 
-import com.ant.domain.product.repository.facade.ProductRepositoryInterface;
+import com.ant.domain.product.repository.facade.ProductRepositoryService;
 import com.ant.domain.product.repository.mapper.ProductsDao;
 import com.ant.domain.product.repository.po.ProductsPO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
 
 /**
  * <p>
@@ -17,7 +15,7 @@ import java.util.Optional;
  * @Date 2022/10/15 11:58
  */
 @Repository
-public class ProductRepositoryImpl implements ProductRepositoryInterface {
+public class ProductRepositoryImpl implements ProductRepositoryService {
 
     @Autowired
     private ProductsDao productsDao;
