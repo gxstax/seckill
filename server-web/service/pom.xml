@@ -20,7 +20,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <netty.version>4.1.56.Final</netty.version>
         <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
-        <dubbo.version>2.7.8</dubbo.version>
+        <dubbo.version>2.7.9</dubbo.version>
         <nacos-client.version>1.4.0</nacos-client.version>
         <spring-boot-maven-plugin.version>2.1.4.RELEASE</spring-boot-maven-plugin.version>
     </properties>

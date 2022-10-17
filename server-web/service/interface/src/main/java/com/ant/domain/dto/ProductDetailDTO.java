@@ -61,7 +61,7 @@ public class ProductDetailDTO implements Serializable {
 
     public ProductDetailDTO mock() {
         this.productName = "华为 mate 50";
-        this.isAvailable = 1;
+        this.isAvailable = 0;
         this.tag = 0;
         this.productPrice = "5999.00";
         this.productPictureUrl = "";

@@ -1,0 +1,32 @@
+server:
+  port: 15010
+  tomcat:
+    basedir: target/tomcat
+    accesslog:
+      enabled: true
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: server-support-application-server
+    main:
+      allow-bean-definition-overriding: true
+
+dubbo:
+  application:
+    name: server-support-application-server
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
+  scan:
+    base-packages: com.ant
+  protocol:
+    name: dubbo
+    port: 15011
+  provider:
+    group: product-group
+
+
+
+

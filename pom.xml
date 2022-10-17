@@ -14,6 +14,10 @@
         <module>server-web/gateway</module>
         <module>server-web/service</module>
         <module>server-support</module>
+        <module>server-support/application-server</module>
+        <module>server-support/interface-server</module>
+        <module>server-support/infrastructure-server</module>
+        <module>server-support/domain-server</module>
     </modules>
 
     <build>

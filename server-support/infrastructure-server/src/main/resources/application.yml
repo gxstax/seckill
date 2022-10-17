@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: server-support-infrastructure-server
+
+server:
+  port: 15210
+  tomcat:
+    basedir: target/tomcat
+    accesslog:
+      enabled: true
+
+dubbo:
+  application:
+    name: server-support-infrastructure-server
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
+  scan:
+    base-packages: com.ant
+  protocol:
+    name: dubbo
+    port: 15211
+  consumer:
+    group: product-group
