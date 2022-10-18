@@ -20,13 +20,13 @@ import org.slf4j.LoggerFactory;
  */
 @Slf4j
 @DubboService
-public class ProductDomainService implements ProductDomainInterface {
+public class ProductDomainServer implements ProductDomainInterface {
 
-    Logger logger = LoggerFactory.getLogger(ProductDomainService.class);
+    Logger logger = LoggerFactory.getLogger(ProductDomainServer.class);
 
     private final ProductRepositoryService productRepositoryService;
 
-    public ProductDomainService(ProductRepositoryService productRepositoryInterface) {
+    public ProductDomainServer(ProductRepositoryService productRepositoryInterface) {
         this.productRepositoryService = productRepositoryInterface;
     }
 

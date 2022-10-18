@@ -1,8 +1,6 @@
 package com.ant.interfaces.facade;
 
-import com.ant.ProductService;
-import com.ant.domain.dto.ProductDetailDTO;
-import org.apache.dubbo.config.annotation.DubboReference;
+import com.ant.interfaces.application.dto.ProductDetailDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -17,9 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 public class MockApi {
 
     private static final Logger logger = LoggerFactory.getLogger(MockApi.class);
-
-    @DubboReference
-    private ProductService productService;
 
     /**
      * 商品详情页

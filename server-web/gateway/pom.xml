@@ -88,12 +88,12 @@
             <scope>compile</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.ant</groupId>
-            <artifactId>interface</artifactId>
-            <version>${project.parent.version}</version>
-            <scope>compile</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ant</groupId>-->
+<!--            <artifactId>interface</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>

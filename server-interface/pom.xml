@@ -15,6 +15,7 @@
     <modules>
         <module>application-interface</module>
         <module>domain-interface</module>
+        <module>infrastructure-interface</module>
     </modules>
 
     <properties>

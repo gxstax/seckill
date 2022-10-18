@@ -9,3 +9,4 @@
 2022/10/17 17:36:18 [error] 67469#2396904: *1 kevent() reported that connect() failed (61: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET //activity/query HTTP/1.1", upstream: "http://127.0.0.1:8080//activity/query", host: "localhost:7082"
 2022/10/17 17:39:53 [error] 67518#2397581: *8 limiting requests, excess: 0.223 by zone "limit_by_user", client: 127.0.0.1, server: , request: "GET /activity/query HTTP/1.1", host: "localhost:7082"
 2022/10/17 17:47:05 [error] 67847#2405172: *1 limiting requests, excess: 0.053 by zone "limit_by_user", client: 127.0.0.1, server: , request: "GET /activity/query HTTP/1.1", host: "localhost:7082"
+2022/10/18 01:51:05 [error] 67847#2405172: *7 limiting requests, excess: 0.088 by zone "limit_by_user", client: 127.0.0.1, server: , request: "GET /activity/query HTTP/1.1", host: "localhost:7082"
