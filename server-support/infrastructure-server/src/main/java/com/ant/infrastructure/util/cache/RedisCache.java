@@ -19,8 +19,8 @@ import java.util.concurrent.TimeUnit;
  * 使用redisTemplate的操作实现类
  * </p>
  *
- * @Author Ant
- * @Date 2022/10/18 20:34
+ * @author Ant
+ * @date 2022/10/18 20:34
  */
 @Component
 public class RedisCache {

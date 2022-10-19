@@ -2,7 +2,11 @@ package com.ant.infrastructure.util.cache;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.redisson.api.RScript;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import javax.annotation.PostConstruct;
 
 /**
@@ -13,7 +17,7 @@ import javax.annotation.PostConstruct;
  * @Author Ant
  * @Date 2022/10/18 19:45
  */
-//@Service
+@Service
 public class SettlementPurchaseLimitServer {
 
     Logger logger = LogManager.getLogger(SettlementPurchaseLimitServer.class);
@@ -42,7 +46,7 @@ public class SettlementPurchaseLimitServer {
     @PostConstruct
     public void init(){
         String sha1 = redisCache.scriptLoad(STORE_DEDUCTION_SCRIPT_LUA);
-        logger.error("生成的sha1：" + sha1);
+        logger.info("生成的sha1：" + sha1);
         STORE_DEDUCTION_SCRIPT_SHA1 = sha1;
     }
 
